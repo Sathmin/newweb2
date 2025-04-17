@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A/L Nest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            flex-direction: column;
+        }
+        .container {
+            text-align: center;
+            margin: 20px;
+        }
+        .subject-box {
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        .subject-box:hover {
+            background-color: #45a049;
+        }
+        .subject-page {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 100%;
+            background-color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .subject-page.active {
+            display: block;
+        }
+        .resource-box {
+            width: 200px;
+            height: 100px;
+            margin: 20px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2196F3;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        .resource-box:hover {
+            background-color: #1e88e5;
+        }
+        .resource-content {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 100%;
+            background-color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .resource-content.active {
+            display: block;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-btn:hover {
+            background-color: #45a049;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            padding: 10px;
+            width: 100%;
+        }
+        footer i {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>A/L Nest - Technology</h2>
+        <a href="#" class="subject-box" onclick="showSubject('ict')">ICT</a>
+        <a href="#" class="subject-box" onclick="showSubject('bst')">Bio Systems Technology</a>
+        <a href="#" class="subject-box" onclick="showSubject('sft')">Science for Technology</a>
+        <a href="#" class="subject-box" onclick="showSubject('et')">Engineering Technology</a>
+    </div>
+
+    <div class="subject-page" id="ictPage">
+        <a href="#" class="back-btn" onclick="backToHome()">Back to Home</a>
+        <h2>Information and Communication Technology (ICT)</h2>
+        <a href="#" class="resource-box" onclick="showResource('ictPastPapers')">Past Papers</a>
+        <a href="#" class="resource-box" onclick="showResource('ictYouTube')">YouTube Links</a>
+    </div>
+    <div class="resource-content" id="ictPastPapers">
+        <a href="#" class="back-btn" onclick="backToSubject('ict')">Back to ICT</a>
+        <h2>ICT - Past Papers</h2>
+        <ul>
+            <li><a href="https://pastpapers.wiki/download/22694/2015-a-l/62069/2015-al-ict-past-paper-sinhala-medium.pdf" target="_blank">2015 A/L ICT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/22697/2016-a-l/62073/2016-al-ict-past-paper-sinhala-medium.pdf" target="_blank">2016 A/L ICT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/22700/2017-a-l/62077/2017-al-ict-past-paper-sinhala-medium.pdf" target="_blank">2017 A/L ICT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/22915/2018-a-l/62081/2018-al-ict-past-paper-sinhala-medium.pdf" target="_blank">2018 A/L ICT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/22920/2019-a-l/62085/2019-al-ict-past-paper-sinhala-medium.pdf" target="_blank">2019 A/L ICT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/22928/2020-a-l/62093/2020-al-ict-past-paper-sinhala-medium.pdf" target="_blank">2020 A/L ICT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/14272/2021-a-l-past-papers/52818/2021-al-ict-past-paper-sinhala-medium.pdf" target="_blank">2021 A/L ICT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/22285/2022-a-l-past-papers/70015/gce-advanced-level-2022-information-and-communication-technology.pdf" target="_blank">2022 A/L ICT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/27227/2023-2024-a-l/70988/20232024-al-ict-paper-sinhala-medium.pdf" target="_blank">2023(2024) A/L ICT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/31381/2024-a-l/85026/2024-al-ict-paper-sinhala-medium.pdf" target="_blank">2024 A/L ICT Past Paper (Sinhala Medium)</a></li>
+        </ul>
+    </div>
+    <div class="resource-content" id="ictYouTube">
+        <a href="#" class="back-btn" onclick="backToSubject('ict')">Back to ICT</a>
+        <h2>ICT - YouTube Links</h2>
+        <ul>
+            <li><a href="https://youtu.be/2NPBFCbhKA4?si=InG8QdYuVIHff_xG" target="_blank">ICT Tutorial Video 1</a></li>
+            <li><a href="https://youtu.be/zXfK6a-JDy4?si=14rbxrXsc8mA2-nZ" target="_blank">ICT Tutorial Video 2</a></li>
+            <li><a href="https://youtube.com/playlist?list=PL9jtyyiCWL6yP4Ir2d0hC4LChh6FIb0Zr&si=NWkO7EnQX9hjGWVt" target="_blank">ICT Playlist 1</a></li>
+            <li><a href="https://www.youtube.com/live/ggaH4PmdsJE?si=TgnNu8CLR1HS7FUx" target="_blank">ICT Tutorial Video 3</a></li>
+            <li><a href="https://youtu.be/Pjd_f3F7Ftw?si=jydO6RocZ638Sx5q" target="_blank">ICT Tutorial Video 4</a></li>
+            <li><a href="https://www.youtube.com/live/nMjeq9uGf1k?si=xlcl1ZZyk108PoGE" target="_blank">ICT Tutorial Video 5</a></li>
+            <li><a href="https://www.youtube.com/live/4-_2HSNNnkY?si=BzBo-T-H3NsH2ZcB" target="_blank">ICT Special Python Tutorial</a></li>
+        </ul>
+    </div>
+
+    <div class="subject-page" id="bstPage">
+        <a href="#" class="back-btn" onclick="backToHome()">Back to Home</a>
+        <h2>Bio Systems Technology</h2>
+        <a href="#" class="resource-box" onclick="showResource('bstPastPapers')">Past Papers</a>
+        <a href="#" class="resource-box" onclick="showResource('bstYouTube')">YouTube Links</a>
+    </div>
+    <div class="resource-content" id="bstPastPapers">
+        <a href="#" class="back-btn" onclick="backToSubject('bst')">Back to BST</a>
+        <h2>Bio Systems Technology - Past Papers</h2>
+        <ul>
+            <li><a href="https://pastpapers.wiki/download/23316/cdn/58763/2015-a-l-bst-past-paper-sinhala-medium.pdf" target="_blank">2015 A/L BST Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/23316/cdn/58767/2016-a-l-bst-past-paper-sinhala-medium-2.pdf" target="_blank">2016 A/L BST Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/23316/cdn/58776/2017-a-l-bst-past-paper-sinhala-medium.pdf" target="_blank">2017 A/L BST Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/23316/cdn/58782/2018-a-l-bst-past-paper-sinhala-medium.pdf" target="_blank">2018 A/L BST Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/23316/cdn/58788/2019-a-l-bst-past-paper-sinhala-medium.pdf" target="_blank">2019 A/L BST Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/23316/cdn/58804/2020-a-l-bst-past-paper-sinhala-medium-2.pdf" target="_blank">2020 A/L BST Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/14272/2021-a-l-past-papers/57793/2021-al-biosystems-technologybst-past-paper-sinhala-medium-2.pdf" target="_blank">2021 A/L BST Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/22285/2022-a-l-past-papers/70011/gce-advanced-level-2022-bio-systems-technology-sinhala-medium.pdf" target="_blank">2022 A/L BST Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/30989/2024-a-l/83807/20232024-al-bst-paper-sinhala-medium.pdf" target="_blank">2023(2024) A/L BST Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/31381/2024-a-l/84938/2024-al-biosystems-technology-bst-paper-sinhala-medium.pdf" target="_blank">2024 A/L BST Past Paper (Sinhala Medium)</a></li>
+        </ul>
+    </div>
+    <div class="resource-content" id="bstYouTube">
+        <a href="#" class="back-btn" onclick="backToSubject('bst')">Back to BST</a>
+        <h2>Bio Systems Technology - YouTube Links</h2>
+        <ul>
+            <li><a href="https://youtube.com/playlist?list=PLdLS36uzww344TNLe1j1ZzSDlblUYnEjY&si=snVo19re4qXgsbzz" target="_blank">BST Playlist 1</a></li>
+            <li><a href="https://youtube.com/playlist?list=PLmLnnsAHQpTa3XMBPRHpi3MgyiLmhf6Sw&si=1uQ6ZXYVS_umnzHE" target="_blank">BST Playlist 2</a></li>
+            <li><a href="https://youtube.com/playlist?list=PLdLS36uzww37JoGhPOIXiRpfwR056chOt&si=aYuhdfzKtm5GaZu8" target="_blank">BST Playlist 3</a></li>
+            <li><a href="https://youtube.com/playlist?list=PLpUo7TyHQvlsl_u_g3jdGNBhbpXa46SKv&si=hyO9swHrAe3WNV3W" target="_blank">BST Playlist 4</a></li>
+            <li><a href="https://www.youtube.com/live/6sqpYs_k1_0?si=PN45140GyNcUFuPL" target="_blank">BST Tutorial Video 1</a></li>
+            <li><a href="https://www.youtube.com/live/8Vmeu8tdRxI?si=R7PJGgi5XJbQDkOG" target="_blank">BST Tutorial Video 2</a></li>
+        </ul>
+    </div>
+
+    <div class="subject-page" id="sftPage">
+        <a href="#" class="back-btn" onclick="backToHome()">Back to Home</a>
+        <h2>Science for Technology</h2>
+        <a href="#" class="resource-box" onclick="showResource('sftPastPapers')">Past Papers</a>
+        <a href="#" class="resource-box" onclick="showResource('sftYouTube')">YouTube Links</a>
+    </div>
+    <div class="resource-content" id="sftPastPapers">
+        <a href="#" class="back-btn" onclick="backToSubject('sft')">Back to SFT</a>
+        <h2>Science for Technology - Past Papers</h2>
+        <ul>
+            <li><a href="https://pastpapers.wiki/download/22694/2015-a-l/56846/2015-al-sft-past-paper-sinhala-medium.pdf" target="_blank">2015 A/L SFT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/22697/2016-a-l/56850/2016-al-sft-past-paper-sinhala-medium.pdf" target="_blank">2016 A/L SFT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/22700/2017-a-l/56854/2017-al-sft-past-paper-sinhala-medium.pdf" target="_blank">2017 A/L SFT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/22915/2018-a-l/56858/2018-al-sft-past-paper-sinhala-medium.pdf" target="_blank">2018 A/L SFT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/22920/2019-a-l/56862/2019-al-sft-past-paper-sinhala-medium.pdf" target="_blank">2019 A/L SFT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/22928/2020-a-l/56866/2020-a-l-sft-past-paper-sinhala-medium.pdf" target="_blank">2020 A/L SFT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/14272/2021-a-l-past-papers/57935/2021-al-sft-past-paper-sinhala-medium-2.pdf" target="_blank">2021 A/L SFT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/22285/2022-a-l-past-papers/70009/gce-advanced-level-2022-sft-sinhala-medium-paper.pdf" target="_blank">2022 A/L SFT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/27227/2023-2024-a-l/71017/20232024-al-sft-paper-sinhala-medium.pdf" target="_blank">2023(2024) A/L SFT Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://drive.google.com/uc?export=download&id=12PYuIMg9gX0tCKrF7iE2tjbQCzLr2D4z" target="_blank">2024 A/L SFT Past Paper (Sinhala Medium)</a></li>
+        </ul>
+    </div>
+    <div class="resource-content" id="sftYouTube">
+        <a href="#" class="back-btn" onclick="backToSubject('sft')">Back to SFT</a>
+        <h2>Science for Technology - YouTube Links</h2>
+        <ul>
+            <li><a href="https://youtube.com/playlist?list=PLFk-3IzTRixCYTTGA07DeSl7pRom_m0cu&si=-KVRsQP4YyCzQHJR" target="_blank">SFT Playlist 1</a></li>
+            <li><a href="https://www.youtube.com/live/JywC9JodWSw?si=oXdM31SonK8Fv-zK" target="_blank">SFT Tutorial Video 1</a></li>
+            <li><a href="https://youtu.be/uJ_XYbTMZMg?si=iXgIvqfw5JabR2fN" target="_blank">SFT Tutorial Video 2</a></li>
+            <li><a href="https://youtu.be/YK-6Pcp6D60?si=RYKLbmNNnHQbOHWa" target="_blank">SFT Tutorial Video 3</a></li>
+            <li><a href="https://www.youtube.com/live/pWDC6954KvA?si=b7kITTd5lJdi26Tu" target="_blank">SFT Tutorial Video 4</a></li>
+            <li><a href="https://youtu.be/WDDCukBffLc?si=zuGK-eE37s_zIMKI" target="_blank">SFT Tutorial Video 5</a></li>
+            <li><a href="https://youtube.com/playlist?list=PL8coe0qsEROYEGpVEOBw4R-Ek_p-ie27g&si=Y93wOpeeVZYJEF04" target="_blank">SFT Playlist 2</a></li>
+        </ul>
+    </div>
+
+    <div class="subject-page" id="etPage">
+        <a href="#" class="back-btn" onclick="backToHome()">Back to Home</a>
+        <h2>Engineering Technology</h2>
+        <a href="#" class="resource-box" onclick="showResource('etPastPapers')">Past Papers</a>
+        <a href="#" class="resource-box" onclick="showResource('etYouTube')">YouTube Links</a>
+    </div>
+    <div class="resource-content" id="etPastPapers">
+        <a href="#" class="back-btn" onclick="backToSubject('et')">Back to ET</a>
+        <h2>Engineering Technology - Past Papers</h2>
+        <ul>
+            <li><a href="https://pastpapers.wiki/download/23316/cdn/58711/2015-al-et-past-paper-sinhala-medium-2.pdf" target="_blank">2015 A/L ET Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/23316/cdn/58717/2016-a-l-et-past-paper-sinhala-medium.pdf" target="_blank">2016 A/L ET Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/23316/cdn/58723/2017-al-et-past-paper-sinhala-medium-2.pdf" target="_blank">2017 A/L ET Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/23316/cdn/58729/2018-al-et-past-paper-sinhala-medium-2.pdf" target="_blank">2018 A/L ET Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://papers.agaram.lk/si/sinhala-past-paper-august-2019old-g-c-e-a-l/" target="_blank">2019 A/L ET Past Paper (Sinhala Medium) [Note: Link is not a direct PDF]</a></li>
+            <li><a href="https://downloads.pastpapers.wiki/download/26/2020-a-l-sinhala/286/general-certificate-of-education-advanced-level-examination-2020-august-new-syllabus-engineering-technology-2.pdf" target="_blank">2020 A/L ET Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/14272/2021-a-l-past-papers/57803/2021-al-engineering-technologyet-past-paper-sinhala-medium-3.pdf" target="_blank">2021 A/L ET Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/22285/2022-a-l-past-papers/70013/gce-advanced-level-2022-engineering-technology-sinhala-medium.pdf" target="_blank">2022 A/L ET Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://pastpapers.wiki/download/27227/2023-2024-a-l/70979/20232024-al-et-paper-sinhala-medium.pdf" target="_blank">2023(2024) A/L ET Past Paper (Sinhala Medium)</a></li>
+            <li><a href="https://www.alevelapi.com/wp-content/uploads/2025/01/2024-AL-ENGINEERING-TECHNOLOGY-PART-II-PAPER-SINHALA-MEDIUM-AlevelApi-PDF-1.pdf" target="_blank">2024 A/L ET Past Paper (Sinhala Medium) [Note: Link may be incomplete]</a></li>
+        </ul>
+    </div>
+    <div class="resource-content" id="etYouTube">
+        <a href="#" class="back-btn" onclick="backToSubject('et')">Back to ET</a>
+        <h2>Engineering Technology - YouTube Links</h2>
+        <ul>
+            <li><a href="https://youtube.com/playlist?list=PLmLnnsAHQpTY-qcr2W0rf4D2bu3061Klq&si=cxAsgLZpCWD3lYiU" target="_blank">ET Playlist 1</a></li>
+            <li><a href="https://youtube.com/playlist?list=PLMF45XnzeEFTG7U8ozOZHuMAvvc2lhRoG&si=tdir29kFlhmDXYJP" target="_blank">ET Playlist 2</a></li>
+            <li><a href="https://youtube.com/playlist?list=PLZp_8GEt_tIoSX1gTVTi7lOQcVtseOIDY&si=mo6iIaG4U4htq67C" target="_blank">ET Playlist 3</a></li>
+            <li><a href="https://youtube.com/playlist?list=PLmLnnsAHQpTavc1y_QmnBLZ-KV9r4ZQxB&si=_k6EQkri8TPC3tCd" target="_blank">ET Playlist 4</a></li>
+            <li><a href="https://www.youtube.com/live/Tfqne1h1uKc?si=B_XK-wQYK-1ijsbH" target="_blank">ET Tutorial Video 1</a></li>
+            <li><a href="https://www.youtube.com/live/1B-AdacLMnY?si=3wIyFtko5xYmIsbj" target="_blank">ET Tutorial Video 2</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p><i>All rights reserved</i> | Powered by Sathmin OFC 2025©</p>
+    </footer>
+
+    <script>
+        function showSubject(subject) {
+            document.querySelector('.container').style.display = 'none';
+            document.getElementById(subject + 'Page').classList.add('active');
+        }
+
+        function showResource(resource) {
+            document.querySelectorAll('.subject-page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(resource).classList.add('active');
+        }
+
+        function backToHome() {
+            document.querySelectorAll('.subject-page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.querySelectorAll('.resource-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelector('.container').style.display = 'block';
+        }
+
+        function backToSubject(subject) {
+            document.querySelectorAll('.resource-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(subject + 'Page').classList.add('active');
+        }
+    </script>
+</body>
+</html>
